@@ -339,8 +339,9 @@ public class ReactiveAdapterRegistry {
 		void registerAdapters(ReactiveAdapterRegistry registry) {
 			registry.registerReactiveType(
 					ReactiveTypeDescriptor.singleOptionalValue(Deferred.class, () -> CompletableDeferredKt.CompletableDeferred(null)),
-					source -> CoroutinesUtils.deferredToMono((Deferred<?>) source),
-					source -> CoroutinesUtils.monoToDeferred(Mono.from(source)));
+					null,
+					null
+			);
 		}
 	}
 
