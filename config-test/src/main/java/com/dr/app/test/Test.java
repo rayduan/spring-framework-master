@@ -20,5 +20,6 @@ public class Test {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		System.out.println(context.getBean(IndexService.class));
 		System.out.println(context.getBean(IndexService.class));
+		context.close();
 	}
 }

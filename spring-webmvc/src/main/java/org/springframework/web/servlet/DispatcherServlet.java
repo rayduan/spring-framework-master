@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2002-2019 the original author or authors.
  *
@@ -1007,6 +1008,7 @@ public class DispatcherServlet extends FrameworkServlet {
 			Exception dispatchException = null;
 
 			try {
+				//检查请求是否是二进制请求
 				processedRequest = checkMultipart(request);
 				multipartRequestParsed = (processedRequest != request);
 
